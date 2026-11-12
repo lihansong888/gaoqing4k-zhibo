@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Build With Gradle
@@ -24,7 +24,7 @@ jobs:
             mv "$file" ${{ github.workspace }}/apk/
           done
       - name: Upload App To Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: gaoqing4k-live-apk
           path: ${{ github.workspace }}/apk/*
