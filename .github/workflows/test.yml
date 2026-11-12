@@ -1,10 +1,9 @@
 name: Test Build
 
 on:
-#  push:
-#    branches:
-#      - main
-#  pull_request:
+  push:
+    branches:
+      - work/gaoqing4k
   workflow_dispatch:
 
 jobs:
@@ -27,5 +26,5 @@ jobs:
       - name: Upload App To Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: com.github.tvbox.osc
+          name: gaoqing4k-live-apk
           path: ${{ github.workspace }}/apk/*
